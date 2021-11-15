@@ -12,3 +12,13 @@ man man/vlmcsd.7
 
 If you don't have man, you may also use the .txt, .html and .pdf files
 in the man directory
+
+
+
+Linux 下KMS搭建教程
+# wget  https://github.com/UtopiaLee/vlmcsd/releases/download/SKMS/binaries.tar.gz
+# tar zxf  binaries.tar.gz
+# cp ./binaries/Linux/intel/static/vlmcsd-x64-musl-static  /bin/kmsserver
+# kmsserver                               #执行kmsserver服务，监听的端口是1688，可以使用命令 netstat -lntup查看服务是否有启动起来
+# echo /bin/kmsserver  >>/etc/rc.local    #加入到开机自启动
+# chmod +x  /etc/rc.d/rc.local    
